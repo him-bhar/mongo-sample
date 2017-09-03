@@ -1,0 +1,5 @@
+db.createCollection("messages", { capped: true, size: 100000000 });
+
+db.messages.insert({message:'Hi Ritika', from: 'Himanshu', to:'Ritika'});
+
+db.messages.find({from:'Himanshu'});
